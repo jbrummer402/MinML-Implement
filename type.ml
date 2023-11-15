@@ -8,4 +8,22 @@ type t = (* MinCaml(caml2html: type_t) *)
   | Array of t
   | Var of t option ref
 
+type binop =
+| Add
+| Sub
+| Mul
+| Eq
+| Neq
+| Lt
+| Lte
+| Gt
+| Gte
+| And
+| Or
+| IAnd
+| IOr
+| Shl
+| Shr
+| Sar
+
 let gentyp () = Var(ref None) (* ���������ѿ����� *)

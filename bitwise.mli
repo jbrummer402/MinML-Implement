@@ -1,0 +1,1 @@
+val bit_op : unit -> int
