@@ -1,3 +1,5 @@
+open Arg
+
 let limit = ref 1000
 
 let rec iter n e = (* ��Ŭ�������򤯤꤫���� (caml2html: main_iter) *)
@@ -16,10 +18,8 @@ let lexbuf outchan l = (* �Хåե��򥳥�ѥ��뤷�ƥ����ͥ�
           (Virtual.f
              (Closure.f
                 (iter !limit
-                   (Alpha.f
-                      (KNormal.f
                          (Typing.f
-                            (Parser.exp Lexer.token l)))))))))
+                            (Parser.exp Lexer.token l)))))))
 
 let string s = lexbuf stdout (Lexing.from_string s) (* ʸ����򥳥�ѥ��뤷��ɸ����Ϥ�ɽ������ (caml2html: main_string) *)
 
