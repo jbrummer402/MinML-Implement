@@ -1,7 +1,9 @@
+open Int
+
 let bitop = function 
-| And
-| Or
-| Xor
+| And -> And(e1, e2)
+| Or -> Or(e1, e2)
+| Xor -> 
 | Not
 | LShift
-| RShift
+| RShift -> shift_right e1
